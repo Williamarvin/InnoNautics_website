@@ -1,8 +1,3 @@
-/*
-Author URI: http://webthemez.com/
-Email: webthemez@gmail.com
-*/
-
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 * {
@@ -10,15 +5,28 @@ Email: webthemez@gmail.com
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 }
+
+
+/* 
+Dark Blue: #3E5BB2
+Lighter blue: #225788
+lighter lighter blue: #68afd4
+
+header text: #DDEAF6
+body text/background 1: #ccddf3
+
+#3e5bb22
+*/
+
 body {
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: #666666; /* body text */
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
-	background: #fff;
+	background: #ccddf3; /* backgroundcheck */
 	transition: all 0.3s linear;
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
@@ -34,7 +42,7 @@ body {
  background: #FFDF00;
 }
 p {
-	color: #858585;
+	color: #858585; /* text */
 	margin: 0 0 1em !important;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -171,7 +179,7 @@ padding: 8px 12px;
 	background: rgba(255,255,255,0.35);
 }
 a {
-	color: #FFDF00;
+	color: #FFDF00; /* footer text */
 	text-decoration: none;
 	text-shadow: none;
 	-webkit-transition: all 0.2s linear;
@@ -199,7 +207,7 @@ a:hover {
 }
 .copyright {
 	color: #000;
-	background: #FFDF00;
+	background:  #3E5BB2;
 	padding: 20px 0;
 }
 .copyright a{
@@ -263,7 +271,7 @@ color:#F89F9F;
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
-	background:#000;
+	background:#ccddf3; /* header background */
 	top:0px;
 }
 .navbar-inverse {
@@ -288,7 +296,7 @@ color:#F89F9F;
 .navbar-toggle {
 }
 #home{ 
-background: rgb(34, 34, 34);
+background: #3e5bb2; /* bottomss carousel color */
 }
 .hero-text {
 	color: #676e73;
@@ -375,7 +383,7 @@ background: rgb(34, 34, 34);
 }
 .header .navbar {
 	margin: 0;
-background: rgba(0, 0, 0, 0.75);
+background: #3E5BB2; /* navbar about background */
 border: 0;
 padding: 0px 15px;
 }
@@ -384,7 +392,6 @@ padding: 0px 15px;
 }
 .hero-text2 h2{
 	font-size: 28px;
-	c
 	line-height: 36px; 
 	text-align: left
 }
@@ -400,7 +407,7 @@ padding-right: 15px;
 color: #000;
 }
 .navbar-inverse .navbar-nav > li > a {
-	color: #fff;
+	color: #3E5BB2;
 	font-size: 1.2em;
 	line-height: normal;
 	margin: 17px;
@@ -787,7 +794,7 @@ left: 2px;
 }
 #contactUs .btn {
 	border-radius: 0px !important;
-	background: #FFDF00;
+	background: #FFDF00; /* contact us button */
 }
 .descrition {
 	min-height: 90px; 
@@ -819,7 +826,7 @@ left: 2px;
 }
 /* --Portfolio----- */
 #work {
- background:rgb(34, 34, 34);
+ background:#3E5BB2;
 }
 #work h2 { 
 color:#fff;
@@ -1031,7 +1038,7 @@ footer {
 	height: 110%;
 }
 footer{
-	background: #0B0B0B;
+	background: #ccddf3; /* footer background */
 }
 footer h4{
 font-size:24px;	
