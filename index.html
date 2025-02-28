@@ -37,7 +37,7 @@
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="navbar-header">
         <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i><img src="images/logo.png" /></i></b></a> </div>
+        <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i style="margin-left: 20px;"><img src="images/logo.png" /></i></b></a> </div>
       <!--/.navbar-header-->
       <div id="main-nav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="mainNav">
@@ -46,7 +46,7 @@
           <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
           <li><a href="#work" class="scroll-link">Events</a></li>
           <li><a href="#plans" class="scroll-link">Fees</a></li>
-          <li><a href="#team" class="scroll-link">Management</a></li>
+          <li><a href="#team" class="scroll-link">Our Team</a></li>
           <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
         </ul>
       </div>
@@ -68,9 +68,9 @@
   </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item"><img src="images/banner-bg.jpg" alt="banner" style="width: 1500px;height: 500px;" /></div>
-    <div class="item"><img src="images/banner-bg2.jpg" alt="banner" style="width: 1500px;height: 500px;" /></div>
-    <div class="item"><img src="images/banner-bg3.jpg" alt="banner" style="width: 1500px;height: 500px;" /></div>
+    <div class="active item"><img src="images/banner-bg.jpg" alt="banner" /></div>
+    <div class="item"><img src="images/banner-bg2.jpg" alt="banner"/></div>
+    <div class="item"><img src="images/banner-bg3.jpg" alt="banner"/></div>
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
@@ -85,54 +85,70 @@
 			<p style="color: #DDEAF6;">InnoNautics upgrades autonomous mobility for water sports users and offers a portable and affordable device that transport users, collected items, and equipments on the water. It assists those who are fatigued or drifting, ensuring both safety and efficiency.  </p>   
 		</div>  
 		<div class="col-md-3">
-			<a class="btn btn-apply" href="#"><i class="fa fa-play-circle"></i>Apply Now</a>  
+			<a class="btn btn-apply" href="#"><i class="fa fa-play-circle"></i>Learn More</a>  
 		</div>
   </div>
 </section>
 <section id="Features" class="page-section colord">
+  <h1 class="text-center">Main Features</h1>
+  <p class="text-center">Controls Incorporated with Overridding Advanced Mechanism</p>
+
   <div class="container">
     <div class="row"> 
       <!-- item -->
-      <div class="col-md-3 text-center"> 
+      <div class="col-md-4 text-center"> 
 	  <div class="box-item">
-	  <i class="circle"><img src="images/5.png" alt="" /></i>
-        <h3>Courses</h3>
-        <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer elit imperdiet congue.</p>
+	  <!-- <i class="circle"><img src="images/5.png" alt="" /></i> -->
+	  <i class="video" style="margin-bottom: 30px;"><video src="videos/On_Board_Control.mp4" width="300px" height="300px" muted autoplay></video></i>
+        <h3 class="control">Automation</h3>
+        <p>Autonomous Navigation to Way Points</p>
       </div>
 	   </div>
       <!-- end: --> 
       
       <!-- item -->
-      <div class="col-md-3 text-center">
+      <div class="col-md-4 text-center">
 	  <div class="box-item">
-	  <i class="circle"> <img src="images/1.png" alt="" /></i>
-        <h3>Knowledge</h3>
-        <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer elit imperdiet congue.</p>
+    <i class="video" style="margin-bottom: 30px;"><video src="videos/On_Board_Control.mp4" width="300px" height="300px" muted autoplay ></video></i>
+
+        <h3 class="control">On Board</h3>
+        <p>Controlled by users via a remote interface.</p>
       </div>
 	   </div>
       <!-- end: --> 
       
       <!-- item -->
-      <div class="col-md-3 text-center">
+      <div class="col-md-4 text-center">
 	  <div class="box-item">
-	  <i class="circle"> <img src="images/2.png" alt="" /></i>
-        <h3>Events</h3>
-        <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit impe.</p>
+    <i class="video" style="margin-bottom: 30px;"><video src="videos/Remote_Control.mp4" width="300px" height="300px" muted autoplay ></video></i>
+        <h3 class="control">Remote</h3>
+        <p>Direct user control for manual navigation.
+        </p>
       </div>
 	   </div>
       <!-- end: --> 
       
       <!-- item -->
-      <div class="col-md-3 text-center">
+      <!-- <div class="col-md-3 text-center">
 	  <div class="box-item">
 	  <i class="circle"> <img src="images/3.png" alt="" /></i>
         <h3>Latest News</h3>
         <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer elit imperdiet conempus.</p>
-      </div>
+      </div> -->
       <!-- end:-->
 	   </div>
     </div>
   </div>
+
+  <section id="demo">
+    <h1>User Journey Demo</h1>
+    <video width="800" height="800" muted autoplay controls class="text-center">
+      <source src="videos/software_demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+
   <!--/.container--> 
 </section>
 <section id="aboutUs" >
@@ -356,8 +372,8 @@
   <div class="container">
     <div class="heading text-center"> 
       <!-- Heading -->
-      <h2>Management</h2>
-      <p>At variations of passages of Lorem Ipsum available, but the majority have suffered alteration..</p>
+      <h2>Our Team</h2>
+      <p>Our team includes mechanical, software, and electronics engineers, with a track record of winning international competitions in this field.</p>
     </div>
     <!-- Team Member's Details -->
     <div class="team-content">
@@ -368,10 +384,10 @@
             <!-- Image Hover Block -->
             <div class="member-img"> 
               <!-- Image  --> 
-              <img class="img-responsive" src="images/photo-1.jpg" alt=""> </div>
+              <img class="img-responsive" src="images/William_Pic.JPG" alt=""> </div>
             <!-- Member Details -->
             <div class="team-title">
-			<h4>John Doe</h4>
+			<h4>William Arvin Fisilo</h4>
             <!-- Designation --> 
             <span class="pos">DEAN</span>
 			</div>
@@ -384,9 +400,9 @@
             <!-- Image Hover Block -->
             <div class="member-img"> 
               <!-- Image  --> 
-              <img class="img-responsive" src="images/photo-2.jpg" alt=""> </div>
+              <img class="img-responsive" src="images/Howard_Pic.JPG" alt=""> </div>
             <!-- Member Details -->
-            <h4>Larry Doe</h4>
+            <h4>Howard Ho Yee Lee</h4>
             <!-- Designation --> 
             <span class="pos">Director</span>
             <div class="team-socials"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
@@ -398,9 +414,9 @@
             <!-- Image Hover Block -->
             <div class="member-img"> 
               <!-- Image  --> 
-              <img class="img-responsive" src="images/photo-3.jpg" alt=""> </div>
+              <img class="img-responsive" src="images/Echo_Pic.JPG" alt=""> </div>
             <!-- Member Details -->
-            <h4>Ranith Kays</h4>
+            <h4>Echo Chan Ho</h4>
             <!-- Designation --> 
             <span class="pos">HOD</span>
             <div class="team-socials"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
@@ -412,9 +428,9 @@
             <!-- Image Hover Block -->
             <div class="member-img"> 
               <!-- Image  --> 
-              <img class="img-responsive" src="images/photo-4.jpg" alt=""> </div>
+              <img class="img-responsive" src="images/stephen.jpg" alt=""> </div>
             <!-- Member Details -->
-            <h4>Joan Ray</h4>
+            <h4>Stephen Wing Hong Lee</h4>
             <!-- Designation --> 
             <span class="pos">Finance</span>
             <div class="team-socials"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
@@ -432,7 +448,7 @@
         <div class="heading text-center"> 
           <!-- Heading -->
           <h2>Contact Us</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+          <!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p> -->
         </div>
       </div>
       <div class="row mrgn30">
@@ -462,34 +478,19 @@
 <footer>
 <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
             	<div class="col">
                    <h4>Contact us</h4>
                    <ul>
-                        <li>1th Avenue, New York - United States</li>
-                        <li>Phone: +22 342 2345 345 | Fax: +22 724 2342 343 </li>
-                        <li>Email: <a href="mailto:info@example.com" title="Email Us">info@example.com</a></li>
-                        <li>Skype: <a href="skype:my.test?call" title="Skype us">my-company</a></li>
+                        <li>12A, Block 3, Marina Habitat, Ap Lei Chau, HK</li>
+                        <li>Phone: +852 5146 2113 </li>
+                        <li>Email: <a href="mailto:innonauticshk@gmail.com" title="Email Us">innonauticshk@gmail.com</a></li>
+                        <!-- <li>Skype: <a href="" title="Skype us">my-company</a></li> -->
                     </ul>
                  </div>
             </div>
             
-            <div class="col-md-3">
-            	<div class="col">
-                    <h4>Mailing list</h4>
-                    <p>Lorem ipsum dolor sit amet, ea eum labitur scsstie percipitoleat.</p>
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your email address...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-footer" type="button">Go!</button>
-                            </span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="col-md-3">
+            <div class="col-md-4">
             	<div class="col col-social-icons">
                     <h4>Follow us</h4>
                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -503,7 +504,21 @@
                 </div>
             </div>
 
-             <div class="col-md-3">
+            <div class="col-md-4">
+            	<div class="col">
+                    <h4>Mailing list</h4>
+                    <p>Receive exclusive updates directly to your inbox.</p>
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Your email address...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-footer" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+             <!-- <div class="col-md-3">
              	<div class="col">
                     <h4>Latest News</h4>
                     <p>
@@ -512,7 +527,7 @@
                     <a href="#" class="btn btn-footer">Get Mores!</a>
                     </p>
                 </div>
-            </div>
+            </div> -->
         </div>
          
     </div>
