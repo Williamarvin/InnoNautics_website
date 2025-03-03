@@ -850,6 +850,9 @@ left: 2px;
 	border-radius: 0px !important;
 	background: #8F8F8F;
 }
+#contactUs h1{
+	color: black;
+}
 .descrition {
 	min-height: 90px; 
 	padding: 5px 15px;
@@ -901,7 +904,8 @@ left: 2px;
 color:#fff;
 }
 #work p { 
-color:#fff;
+color:#8F8F8F;
+font-weight: bold;
 }
 #portfolio {
 	width: 100%
@@ -1361,6 +1365,7 @@ margin-top: 36px;
 	width: 67%;
 	top: 122px;
 }
+
 .team-member .member-img img {
 	max-width: 100%;
 }
@@ -1494,6 +1499,9 @@ padding: 22px 0 !important;
 	display: inline-block;
 	text-align: center;
 	font-size: 16px;
+}
+#team h1{
+	color: black;
 }
 .page-section {
 	padding: 0px;
