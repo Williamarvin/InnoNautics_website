@@ -100,6 +100,9 @@ background: #9FDE32
 	margin-bottom: 5px;
 	font-weight: 500;
 }
+h2{
+	/* color: grey; */
+}
 .feature a {
 display: inline-block;
 font-size: 18px;
@@ -562,9 +565,9 @@ a.arrow-link:hover {
 .da-slider {
 	margin: 0 auto !important;
 }
-.heading h2 {
+/* .heading h2 {
 	color: #222;
-}
+} */
 
 .sub-heading {
 	padding: 15px 0;
@@ -657,11 +660,14 @@ video{
 	padding-right: 32px;
 	float: left;
 }
+#aboutUs h1{
+	color: black;
+}
 #aboutUs h3 {
 	font: 18px/34px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #222;
+	/* color: #222; */
 }
 .fluid-video-wrapper {
 	margin-top: 18px;
