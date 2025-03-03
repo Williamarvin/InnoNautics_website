@@ -878,6 +878,21 @@ left: 2px;
 	text-align: center;
 	font-size: 18px;
 }
+
+/* --supports-----*/
+#support{
+	background-color: white;
+}
+#support h1{
+	text-align: center;
+	color: black;
+	margin-bottom: 50px;
+}
+#support img{
+	margin-bottom: 100px;
+}
+
+
 /* --Portfolio----- */
 #work {
  background:#3E5BB2;
