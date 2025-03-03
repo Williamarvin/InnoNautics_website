@@ -669,6 +669,11 @@ video{
 	letter-spacing: 1px;
 	/* color: #222; */
 }
+#aboutUs .user-interview{
+	float: left;
+	margin-left: 70px;
+}
+
 .fluid-video-wrapper {
 	margin-top: 18px;
 }
@@ -1632,3 +1637,40 @@ nav#filter li {
 	margin: 0px;
 }
 
+/* talk bubble */
+
+.talk-bubble {
+	margin: 40px;
+	display: inline-block;
+	position: relative;
+	width: 200px;
+	height: auto;
+	background-color: #3E5BB2;
+	padding: 20px;
+}
+
+.round{
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+  }
+
+.tri-right.btm-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	right: auto;
+	top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent #3E5BB2;
+}
+
+.talktext p{
+	/* remove webkit p margins */
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	color: white;
+}
