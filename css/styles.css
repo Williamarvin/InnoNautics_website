@@ -673,6 +673,11 @@ video{
 #aboutUs .right {
 	float: right;
 }
+
+#aboutUs img{
+	margin-bottom: 40px;
+}
+
 .row .area1 {
 	width: 65%;
 }
@@ -1620,3 +1625,4 @@ nav#filter li {
 .isotopeWrapper article {
 	margin: 0px;
 }
+
