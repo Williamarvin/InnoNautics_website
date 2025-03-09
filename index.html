@@ -101,7 +101,7 @@
       <div class="col-md-4 text-center"> 
 	  <div class="box-item">
 	  <!-- <i class="circle"><img src="images/5.png" alt="" /></i> -->
-	  <i class="video" style="margin-bottom: 30px;"><video src="videos/On_Board_Control.mp4" width="300px" height="300px" muted autoplay></video></i>
+	  <i class="video" style="margin-bottom: 30px;"><video src="videos/Software_Demo.mp4" width="300px" height="300px" muted autoplay></video></i>
         <h3 class="control">Automation</h3>
         <p>Autonomous Navigation to Way Points</p>
       </div>
@@ -145,7 +145,7 @@
   <section id="demo">
     <h1>User Journey Demo Simulation</h1>
     <video width="800" height="800" muted autoplay controls class="text-center">
-      <source src="videos/software_demo.mp4" type="video/mp4">
+      <source src="videos/Software_Demo.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </section>
@@ -389,24 +389,22 @@
             <div class="result"></div>
           </div>
         </form> -->
-        <form id="contactfrm">
-          <div class="col-sm-12">
-              <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
-              </div>
-              <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
-              </div>
-              <div class="form-group">
-                  <label for="comments">Comments</label>
-                  <textarea name="comment" class="form-control" id="comments" rows="5" placeholder="Enter your message…" required></textarea>
-                  <button type="submit" class="btn btn-lg btn-primary">Submit</button>
-              </div>
-              <div id="result" style="margin-top: 10px;"></div>
+        <form method="post" action="php/contact_form.php" id="contactfrm" role="form">
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
           </div>
-        </form>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+          </div>
+          <div class="form-group">
+              <label for="comments">Comments</label>
+              <textarea name="comment" class="form-control" id="comments" rows="5" placeholder="Enter your message…" required></textarea>
+              <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+          </div>
+          <div class="result mt-3"></div>
+      </form>
       </div>
     </div>
     <!--/.container--> 
@@ -414,32 +412,29 @@
 </section>
 
 <script>
-document.getElementById("contactfrm").addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  let formData = new FormData(this);
-  let resultDiv = document.getElementById("result");
-
-  fetch("php/contact_form.php", {
-      method: "POST",
-      body: formData
-  })
-  .then(response => response.text())
-  .then(data => {
-      if (data === "success") {
-          resultDiv.innerHTML = "<p style='color: green;'>Message sent successfully!</p>";
-          document.getElementById("contactfrm").reset();
-      } else if (data === "invalid_email") {
-          resultDiv.innerHTML = "<p style='color: red;'>Invalid email address!</p>";
-      } else {
-          resultDiv.innerHTML = "<p style='color: red;'>Something went wrong. Try again.</p>";
-      }
-  })
-  .catch(error => {
-      resultDiv.innerHTML = "<p style='color: red;'>Error: " + error + "</p>";
+  document.getElementById("contactfrm").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      let formData = new FormData(this);
+  
+      fetch("php/contact_form.php", {
+          method: "POST",
+          body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+          let resultDiv = document.querySelector(".result");
+          if (data.trim() === "success") {
+              resultDiv.innerHTML = '<div class="alert alert-success">Your message has been sent successfully!</div>';
+              document.getElementById("contactfrm").reset();
+          } else {
+              resultDiv.innerHTML = '<div class="alert alert-danger">There was an error sending your message. Please try again.</div>';
+          }
+      })
+      .catch(error => console.error("Error:", error));
   });
-});
-</script>
+  </script>
+  
 
 <section id="support">
   <div class="container">
@@ -497,7 +492,7 @@ document.getElementById("contactfrm").addEventListener("submit", function(event)
                     
                     <h4>Company Pitch</h4>
                     <h5 style="font-weight: bold;"><u><a href="https://www.canva.com/design/DAGZO1EFmR8/mq74jF2ekYkgA_UnoANmbw/edit?utm_content=DAGZO1EFmR8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Full Slides</a></u></h5>
-                    <img src="/images/canva.png" alt="" width="50" height="50">
+                    <img src="/images/canva.png" alt="canva logo" width="50" height="50">
                     
                 </div>
             </div>
