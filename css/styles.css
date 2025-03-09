@@ -93,7 +93,7 @@ background: #51D4B6;
 background: #9FDE32
 }
 .control{
-	font-weight: 900;
+	font-weight: 500;
 }
 #Features h1{
 	color: black;
@@ -907,6 +907,13 @@ color:#fff;
 #work p { 
 color:#8F8F8F;
 font-weight: bold;
+}
+#work img{
+	width: 350px;
+	height: 350px;
+}
+#work a{
+	margin-top: 20px;
 }
 #portfolio {
 	width: 100%

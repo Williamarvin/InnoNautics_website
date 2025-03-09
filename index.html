@@ -230,104 +230,62 @@
 
 <section id="work" class="page-section page">
   <div class="container text-center">
-    <div class="heading">
-      <h2>Image Collection</h2>
-      <p>Photos documenting past development and transformation</p>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="portfolio">
-          <ul class="filters list-inline">
-            <li> <a class="active" data-filter="*" href="#">All</a> </li>
-            <li> <a data-filter=".photography" href="#">Events</a> </li>
-            <li> <a data-filter=".branding" href="#">Games</a> </li>
-            <li> <a data-filter=".web" href="#">Science fair</a> </li>
-          </ul>
-          <ul class="items list-unstyled clearfix animated fadeInRight showing" data-animation="fadeInRight" style="position: relative; height: 438px;">
-            <li class="item branding" style="position: absolute; left: 0px; top: 0px;"> 
-								 			 
-			  <figure class="effect-bubba">
-						<img src="images/work/1.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/1.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure> 
-					
-			  </li>
-			  
-			 
-			  
-			  
-            <li class="item photography" style="position: absolute; left: 292px; top: 0px;"> 
-			<figure class="effect-bubba">
-						<img src="images/work/2.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/2.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure> 
-			  </li>
-            <li class="item branding" style="position: absolute; left: 585px; top: 0px;"> 
-			<figure class="effect-bubba">
-						<img src="images/work/3.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/3.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure>  
-			  </li>
-            <li class="item photography" style="position: absolute; left: 877px; top: 0px;"> 
-			<figure class="effect-bubba">
-						<img src="images/work/4.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/4.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure>  
-			  </li>
-            <li class="item photography" style="position: absolute; left: 0px; top: 219px;"> 
-			<figure class="effect-bubba">
-						<img src="images/work/5.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/5.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure> 
-			  </li>
-            <li class="item web" style="position: absolute; left: 292px; top: 219px;"> 
-			<figure class="effect-bubba">
-						<img src="images/work/6.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/6.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure> 
-			  </li>
-            <li class="item photography" style="position: absolute; left: 585px; top: 219px;">
-			<figure class="effect-bubba">
-						<img src="images/work/7.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/7.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure> 
-			  </li>
-            <li class="item web" style="position: absolute; left: 877px; top: 219px;">
-			<figure class="effect-bubba">
-						<img src="images/work/8.jpg" alt="img02"/>
-						<figcaption>
-							<h2>B-Events</h2> 
-							<a href="images/work/8.jpg" class="fancybox">View more</a> 
-						</figcaption>			
-					</figure> 
-			  </li>
-          </ul>
-        </div>
+      <div class="heading">
+          <h2>Image Collection</h2>
+          <p>Photos documenting past development and transformation</p>
       </div>
-    </div>
+      <div class="row">
+          <div class="col-md-12">
+              <div id="portfolio">
+                  <ul class="filters list-inline">
+                      <li><a class="active" data-filter="*" href="#">All</a></li>
+                      <li><a data-filter=".development" href="#">Development</a></li>
+                      <li><a data-filter=".engineering" href="#">Engineering</a></li>
+                      <li><a data-filter=".waterTest" href="#">Water Test</a></li>
+                  </ul>
+                  <ul id="image-gallery" class="items list-unstyled clearfix"></ul>
+              </div>
+          </div>
+      </div>
   </div>
 </section>
+
+<script>
+  const categories = {
+      development: "images/gallery/development",
+      engineering: "images/gallery/engineering",
+      waterTest: "images/gallery/waterTest"
+  };
+
+  const imageCounts = {
+      development: 18,
+      engineering: 4,
+      waterTest: 5            
+  };
+
+  const gallery = document.getElementById("image-gallery");
+
+  // Dynamically generate images for each category
+  Object.keys(categories).forEach(category => {
+      for (let i = 1; i <= imageCounts[category]; i++) {
+          const imageSrc = `${categories[category]}/${i}.jpg`; // Adjust file extension if needed
+          const listItem = document.createElement("li");
+          listItem.className = `item ${category}`;
+
+          listItem.innerHTML = `
+              <figure class="effect-bubba">
+                  <img src="${imageSrc}" alt="${category} Image">
+                  <figcaption>
+                      <h2>${category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+                      <a href="${imageSrc}" class="fancybox">View more</a>
+                  </figcaption>
+              </figure>
+          `;
+
+          gallery.appendChild(listItem);
+      }
+  });
+</script>
 
 <section id="team" class="page-section">
   <div class="container">
