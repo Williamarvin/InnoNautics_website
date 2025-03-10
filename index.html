@@ -84,7 +84,7 @@
   <div class="container hero-text2">        
 		<div class="col-md-9">
 		<h2 style="color: #DDEAF6;">Why InnoNautics?</h1>
-			<p style="color: #DDEAF6;">InnoNautics upgrades autonomous mobility for water sports users and offers a portable and affordable device that transport users, collected items, and equipments on the water. It assists those who are fatigued or drifting, ensuring both safety and efficiency.  </p>   
+			<p style="color: #DDEAF6; font-size:medium">InnoNautics upgrades autonomous mobility for water sports users and offers a portable and affordable device that transport users, collected items, and equipments on the water. It assists those who are fatigued or drifting, ensuring both safety and efficiency.  </p>   
 		</div>  
 		<div class="col-md-3">
 			<a class="btn btn-apply" href="#aboutUs"><i class="fa far fa-info"></i>Learn More</a>  
@@ -101,7 +101,7 @@
       <div class="col-md-4 text-center"> 
 	  <div class="box-item">
 	  <!-- <i class="circle"><img src="images/5.png" alt="" /></i> -->
-	  <i class="video" style="margin-bottom: 30px;"><video src="videos/Software_Demo.mp4" width="300px" height="300px" muted autoplay></video></i>
+	  <i class="video" id="videoContainer" style="margin-bottom: 30px;"><video src="videos/Software_Demo.mp4" width="300px" height="300px" muted autoplay></video></i>
         <h3 class="control">Automation</h3>
         <p>Autonomous Navigation to Way Points</p>
       </div>
@@ -111,23 +111,26 @@
       <!-- item -->
       <div class="col-md-4 text-center">
 	  <div class="box-item">
-    <i class="video" style="margin-bottom: 30px;"><video src="videos/On_Board_Control.mp4" width="300px" height="300px" muted autoplay ></video></i>
+    <i class="video" id="videoContainer" style="margin-bottom: 30px;"><video src="videos/On_Board_Control.mp4" width="300px" height="300px" muted autoplay ></video></i>
 
         <h3 class="control">On Board</h3>
         <p>Controlled by users via a remote interface.</p>
       </div>
 	   </div>
+
       <!-- end: --> 
       
       <!-- item -->
       <div class="col-md-4 text-center">
 	  <div class="box-item">
-    <i class="video" style="margin-bottom: 30px;"><video src="videos/Remote_Control.mp4" width="300px" height="300px" muted autoplay ></video></i>
+    <i class="video" id="videoContainer" style="margin-bottom: 30px;"><video src="videos/Remote_Control.mp4" width="300px" height="300px" muted autoplay ></video></i>
         <h3 class="control">Remote</h3>
         <p>Direct user control for manual navigation.
         </p>
       </div>
 	   </div>
+     <div class="overlay" id="overlay"></div>
+
       <!-- end: --> 
       
       <!-- item -->
@@ -141,6 +144,25 @@
 	   </div>
     </div>
   </div>
+
+  <script>
+    const videos = document.querySelectorAll('.video');
+    const overlay = document.getElementById('overlay');
+
+    videos.forEach(videoContainer => {
+        videoContainer.addEventListener('click', () => {
+            videoContainer.classList.toggle('enlarged');
+            overlay.style.display = videoContainer.classList.contains('enlarged') ? 'block' : 'none';
+        });
+    });
+
+    overlay.addEventListener('click', () => {
+        videos.forEach(videoContainer => {
+            videoContainer.classList.remove('enlarged');
+        });
+        overlay.style.display = 'none';
+    });
+</script>
 
   <section id="demo">
     <h1>User Journey Demo Simulation</h1>
@@ -159,6 +181,11 @@
       <!-- Heading -->
       <h1>What We Do?</h1>
       <p>Our objectives were developed based on insights from user interviews and research.</p>
+
+      <!-- <div class="container">
+        <h2>Problem Statement</h2>
+        <h3>InnoNautics upgrades autonomous mobility for water sports users and offers a portable and affordable device that transport users, collected items, and equipments on the water. It assists those who are fatigued or drifting, ensuring both safety and efficiency.</h3>
+      </div> -->
 
       <div class="container">
         <h2>Objectives <i class="fa fas fa-bullseye"></i></h2>
