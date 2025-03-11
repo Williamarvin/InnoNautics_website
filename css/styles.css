@@ -695,6 +695,11 @@ video{
 	float: left;
 	margin-left: 70px;
 }
+.user-interview{
+	width: 150x;
+	height: 150px;
+	border-radius: 20px;
+}
 
 .fluid-video-wrapper {
 	margin-top: 18px;
@@ -932,6 +937,7 @@ font-weight: bold;
 #work img{
 	width: 350px;
 	height: 350px;
+	object-fit: cover;
 }
 #work a{
 	margin-top: 20px;
@@ -1726,3 +1732,7 @@ nav#filter li {
 	-webkit-margin-after: 0em;
 	color: white;
 }
+
+
+
+
