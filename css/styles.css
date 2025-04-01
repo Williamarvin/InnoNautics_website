@@ -700,6 +700,9 @@ video{
 	margin-top: 30px;
 	/* color: #222; */
 }
+#aboutUs p{
+	font-weight: 600;
+}
 #aboutUs .user-interview{
 	float: left;
 	margin-left: 70px;
