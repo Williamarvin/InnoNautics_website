@@ -43,6 +43,7 @@ body {
 }
 p {
 	color: #858585; /* text */
+	font-weight: 600;
 	margin: 0 0 1em !important;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -225,8 +226,9 @@ a:hover {
 	margin: 30px 0;
 }
 .copyright {
-	color: #000;
-	background:  #ccddf3;
+	color: white;
+	font-weight: bold;
+	background:  #3E5BB2;
 	padding: 20px 0;
 }
 .copyright a{
@@ -472,6 +474,7 @@ color: #000;
 .page-section p {
 	font-size: 15px;
 	line-height: 1.5em;
+	font-weight: 600;
 }
 .darkBg {
 	background: #000;
@@ -653,10 +656,12 @@ video{
 	z-index: 999;
 }
 
+
+
 #demo h1{
 	display: block;
 	margin-top: 50px auto;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	text-align: center;
 }
 
@@ -683,6 +688,10 @@ video{
 }
 #aboutUs h1{
 	color: black;
+}
+
+#aboutUs h2{
+	text-decoration: underline;
 }
 #aboutUs h3 {
 	font: 18px/34px;
@@ -913,26 +922,42 @@ left: 2px;
 #support{
 	background-color: white;
 }
+
 #support h1{
 	text-align: center;
 	color: black;
 	margin-bottom: 50px;
+	margin-top: 100px;
 }
 #support img{
 	margin-bottom: 100px;
 }
 
+.support h4{
+	color: white;
+}
+
+.support li{
+	color:white;
+}
+
+.support a{
+	color:white;
+}
 
 /* --Portfolio----- */
 #work {
- background:#3E5BB2;
+ 	background:#3E5BB2;
 }
-#work h2 { 
-color:#fff;
+#work h1 { 
+	color:white;
+	margin-top: 0px;
+	margin-bottom: 5px;
 }
 #work p { 
 color:#8F8F8F;
-font-weight: bold;
+/* margin-top: 0px; */
+/* font-weight: bold; */
 }
 #work img{
 	width: 350px;
@@ -1146,7 +1171,7 @@ footer {
 	height: 110%;
 }
 footer{
-	background: #ccddf3; /* footer background */
+	background: #3E5BB2; /* footer background */
 }
 footer h4{
 font-size:24px;	
@@ -1169,7 +1194,7 @@ margin-right: 10px;
 margin-bottom: 10px;
 text-align: center;
 font-size: 18px; 
-color: #333;
+color: white;
 border-radius: 0px; 
 border: 1px solid #2D2D2D;
 }
@@ -1732,7 +1757,3 @@ nav#filter li {
 	-webkit-margin-after: 0em;
 	color: white;
 }
-
-
-
-
