@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OceanRider Surfboards - Premium Boards for Every Wave</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ocean-blue': '#0EA5E9',
+                        'deep-navy': '#1E3A8A',
+                        'sandy': '#F5F5DC',
+                        'coral': '#FF6B6B',
+                        'wave-teal': '#14B8A6'
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body text-gray-800 bg-white">
+
+    <!-- @COMPONENT: NavigationHeader -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-water text-ocean-blue text-2xl"></i>
+                    <span class="font-heading font-bold text-xl text-deep-navy">OceanRider</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#products" class="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Products</a>
+                    <a href="#about" class="text-gray-700 hover:text-ocean-blue transition-colors font-medium">About</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="bg-ocean-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors font-medium">
+                        Get Quote
+                    </button>
+                    <button class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: NavigationHeader -->
+
+    <!-- @COMPONENT: HeroSection -->
+    <section class="relative h-screen overflow-hidden">
+        <!-- Multiple surfboards on pristine beach with crystal blue water -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+             style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-deep-navy/70 to-ocean-blue/50"></div>
+        
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-center text-white max-w-4xl mx-auto px-4">
+                <h1 class="font-heading font-bold text-5xl md:text-7xl mb-6 leading-tight">
+                    Ride Every Wave <br>
+                    <span class="text-sandy">With Confidence</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-2xl mx-auto">
+                    Premium handcrafted surfboards designed for performance, durability, and the pure joy of surfing.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-coral text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-500 transition-colors">
+                        Shop Boards
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-deep-navy transition-colors">
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: ProductShowcase -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-4xl md:text-5xl text-deep-navy mb-4">
+                    Our Surfboard Collection
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From beginner-friendly longboards to high-performance shortboards, find your perfect wave companion.
+                </p>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Performance Shortboards -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Professional surfer riding a powerful wave on shortboard -->
+                    <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Surfer on shortboard riding wave" 
+                         class="w-full h-64 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-heading font-bold text-2xl text-deep-navy">Performance Shortboards</h3>
+                            <span class="bg-coral text-white px-3 py-1 rounded-full text-sm font-semibold">Popular</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            High-performance boards designed for experienced surfers. Perfect for critical waves and progressive surfing.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div><strong>Length:</strong> 5'8" - 6'6"</div>
+                            <div><strong>Volume:</strong> 26L - 35L</div>
+                            <div><strong>Skill Level:</strong> Advanced</div>
+                            <div><strong>Wave Size:</strong> 2-12ft</div>
+                        </div>
+                        <button class="w-full bg-ocean-blue text-white py-3 rounded-lg hover:bg-blue-600 transition-colors font-semibold">
+                            View Models
+                        </button>
+                    </div>
+                </div>
+
+                <!-- All-Around Fun Boards -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Colorful surfboards lined up on sandy beach -->
+                    <img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Colorful surfboards on beach" 
+                         class="w-full h-64 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-2xl text-deep-navy mb-4">All-Around Fun Boards</h3>
+                        <p class="text-gray-600 mb-6">
+                            Versatile boards perfect for intermediate surfers. Great stability and wave-catching ability for endless fun.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div><strong>Length:</strong> 7'0" - 8'6"</div>
+                            <div><strong>Volume:</strong> 45L - 55L</div>
+                            <div><strong>Skill Level:</strong> Intermediate</div>
+                            <div><strong>Wave Size:</strong> 1-8ft</div>
+                        </div>
+                        <button class="w-full bg-ocean-blue text-white py-3 rounded-lg hover:bg-blue-600 transition-colors font-semibold">
+                            View Models
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Beginner Longboards -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Classic longboard surfboard on tropical beach -->
+                    <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Classic longboard on tropical beach" 
+                         class="w-full h-64 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-2xl text-deep-navy mb-4">Beginner Longboards</h3>
+                        <p class="text-gray-600 mb-6">
+                            Stable, forgiving boards perfect for learning. Extra volume and length provide excellent stability and paddle power.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div><strong>Length:</strong> 8'6" - 10'0"</div>
+                            <div><strong>Volume:</strong> 55L - 75L</div>
+                            <div><strong>Skill Level:</strong> Beginner</div>
+                            <div><strong>Wave Size:</strong> 1-6ft</div>
+                        </div>
+                        <button class="w-full bg-ocean-blue text-white py-3 rounded-lg hover:bg-blue-600 transition-colors font-semibold">
+                            View Models
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Products -->
+            <div class="text-center mb-12">
+                <h3 class="font-heading font-bold text-3xl text-deep-navy mb-4">Featured Models</h3>
+                <p class="text-lg text-gray-600">Hand-picked boards representing the best of our craftsmanship</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1: Ocean Rider Pro -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-mock="true">
+                    <!-- High-end surfboard with blue and white design -->
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Ocean Rider Pro surfboard" 
+                         class="w-full h-48 object-cover" data-mock-image="true">
+                    <div class="p-4">
+                        <h4 class="font-heading font-semibold text-lg mb-2">Ocean Rider Pro</h4>
+                        <p class="text-gray-600 text-sm mb-3">6'2" Performance Shortboard</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-coral text-xl">$849</span>
+                            <button class="bg-ocean-blue text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600 transition-colors">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Wave Cruiser -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-mock="true">
+                    <!-- Retro-style longboard surfboard -->
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Wave Cruiser longboard" 
+                         class="w-full h-48 object-cover" data-mock-image="true">
+                    <div class="p-4">
+                        <h4 class="font-heading font-semibold text-lg mb-2">Wave Cruiser</h4>
+                        <p class="text-gray-600 text-sm mb-3">9'0" Longboard Classic</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-coral text-xl">$695</span>
+                            <button class="bg-ocean-blue text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600 transition-colors">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Reef Break -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-mock="true">
+                    <!-- Modern funboard surfboard design -->
+                    <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Reef Break funboard" 
+                         class="w-full h-48 object-cover" data-mock-image="true">
+                    <div class="p-4">
+                        <h4 class="font-heading font-semibold text-lg mb-2">Reef Break</h4>
+                        <p class="text-gray-600 text-sm mb-3">7'6" Fun Board</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-coral text-xl">$749</span>
+                            <button class="bg-ocean-blue text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600 transition-colors">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Grom Special -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-mock="true">
+                    <!-- Youth/beginner surfboard in bright colors -->
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Grom Special youth surfboard" 
+                         class="w-full h-48 object-cover" data-mock-image="true">
+                    <div class="p-4">
+                        <h4 class="font-heading font-semibold text-lg mb-2">Grom Special</h4>
+                        <p class="text-gray-600 text-sm mb-3">6'8" Youth Board</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-coral text-xl">$545</span>
+                            <button class="bg-ocean-blue text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600 transition-colors">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ProductShowcase -->
+
+    <!-- @COMPONENT: TechnicalSpecs -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-4xl md:text-5xl text-deep-navy mb-4">
+                    Craftsmanship & Technology
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Every OceanRider board combines traditional shaping techniques with modern materials and technology.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <!-- Professional surfboard construction in workshop -->
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Surfboard construction workshop" 
+                         class="rounded-2xl shadow-xl w-full" data-mock="true">
+                </div>
+                <div>
+                    <h3 class="font-heading font-bold text-3xl text-deep-navy mb-6">Materials & Construction</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center">
+                                <i class="fas fa-tree text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Premium EPS Core</h4>
+                                <p class="text-gray-600">Lightweight, responsive foam core provides exceptional buoyancy and performance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-wave-teal rounded-full flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Epoxy Resin System</h4>
+                                <p class="text-gray-600">Superior strength-to-weight ratio with enhanced durability and impact resistance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-coral rounded-full flex items-center justify-center">
+                                <i class="fas fa-cut text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Hand-Shaped Rails</h4>
+                                <p class="text-gray-600">Each board is meticulously shaped by our master craftsmen for optimal performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Characteristics -->
+            <div class="bg-gray-50 rounded-3xl p-8 lg:p-12">
+                <h3 class="font-heading font-bold text-3xl text-center text-deep-navy mb-12">Performance Characteristics</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-ocean-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tachometer-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-3">Speed & Acceleration</h4>
+                        <p class="text-gray-600">Hydrodynamic design principles ensure maximum speed generation and wave catching ability.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-wave-teal rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-balance-scale text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-3">Stability & Control</h4>
+                        <p class="text-gray-600">Carefully calculated volume distribution provides the perfect balance of stability and maneuverability.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-coral rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-water text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-3">Wave Connection</h4>
+                        <p class="text-gray-600">Responsive flex patterns and rocker profiles create an intuitive connection with the wave.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TechnicalSpecs -->
+
+    <!-- @COMPONENT: AboutSection -->
+    <section id="about" class="py-20 bg-deep-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                        Crafting Dreams Since 1995
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Founded by master shaper Jake Morrison on the shores of Oahu, OceanRider has been creating world-class surfboards for nearly three decades. What started as a small backyard operation has grown into one of the most respected board manufacturers in the industry.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <div class="text-3xl font-bold text-sandy mb-2" data-bind="stats.boardsCrafted">25,000+</div>
+                            <div class="text-gray-400">Boards Crafted</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-sandy mb-2" data-bind="stats.happyRiders">12,000+</div>
+                            <div class="text-gray-400">Happy Riders</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-sandy mb-2" data-bind="stats.yearsExperience">28</div>
+                            <div class="text-gray-400">Years Experience</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-sandy mb-2" data-bind="stats.proRiders">150+</div>
+                            <div class="text-gray-400">Pro Riders</div>
+                        </div>
+                    </div>
+                    <button class="bg-coral text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-500 transition-colors">
+                        Our Story
+                    </button>
+                </div>
+                <div>
+                    <!-- Master surfboard shaper at work in workshop -->
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Master surfboard shaper at work" 
+                         class="rounded-2xl shadow-2xl w-full" data-mock="true">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- @COMPONENT: TestimonialsSection -->
+    <section id="reviews" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-4xl md:text-5xl text-deep-navy mb-4">
+                    What Riders Say
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Join thousands of satisfied surfers who trust OceanRider for their next session
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow" data-mock="true">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "My OceanRider Pro has completely transformed my surfing. The responsiveness and speed are incredible. I've never felt more connected to the wave."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            SM
+                        </div>
+                        <div>
+                            <div class="font-semibold" data-bind="testimonial.name">Sarah Martinez</div>
+                            <div class="text-gray-500 text-sm" data-bind="testimonial.location">Huntington Beach, CA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow" data-mock="true">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "As a beginner, the Wave Cruiser gave me the confidence I needed. It's stable, forgiving, and absolutely beautiful. Couldn't ask for more!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-wave-teal rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            MJ
+                        </div>
+                        <div>
+                            <div class="font-semibold" data-bind="testimonial.name">Mike Johnson</div>
+                            <div class="text-gray-500 text-sm" data-bind="testimonial.location">Santa Monica, CA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow" data-mock="true">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "I've been shaping for 20 years, and OceanRider boards are exceptional. The attention to detail and quality of craftsmanship is unmatched."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-coral rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            LT
+                        </div>
+                        <div>
+                            <div class="font-semibold" data-bind="testimonial.name">Lisa Thompson</div>
+                            <div class="text-gray-500 text-sm" data-bind="testimonial.location">Pipeline, HI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="mt-16 pt-12 border-t border-gray-300">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-deep-navy mb-2">4.9/5</div>
+                        <div class="text-sm text-gray-600">Average Rating</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-deep-navy mb-2">2.1K</div>
+                        <div class="text-sm text-gray-600">Reviews</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-deep-navy mb-2">98%</div>
+                        <div class="text-sm text-gray-600">Satisfaction Rate</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-deep-navy mb-2">5★</div>
+                        <div class="text-sm text-gray-600">Shop Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TestimonialsSection -->
+
+    <!-- @COMPONENT: ContactSection -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-4xl md:text-5xl text-deep-navy mb-4">
+                    Ready to Find Your Perfect Board?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get in touch with our experts for personalized recommendations, custom orders, or any questions about our surfboards.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10">
+                    <h3 class="font-heading font-bold text-2xl text-deep-navy mb-6">Send us a Message</h3>
+                    <form class="space-y-6" data-implementation="Should validate and submit form data">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ocean-blue focus:border-transparent" placeholder="John" data-mock="true" data-bind="form.firstName">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ocean-blue focus:border-transparent" placeholder="Doe" data-mock="true" data-bind="form.lastName">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ocean-blue focus:border-transparent" placeholder="john@example.com" data-mock="true" data-bind="form.email">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ocean-blue focus:border-transparent" placeholder="(555) 123-4567" data-mock="true" data-bind="form.phone">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Experience Level</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ocean-blue focus:border-transparent" data-mock="true" data-bind="form.experienceLevel">
+                                <option>Select your level</option>
+                                <option value="beginner">Beginner (0-1 years)</option>
+                                <option value="intermediate">Intermediate (2-5 years)</option>
+                                <option value="advanced">Advanced (5+ years)</option>
+                                <option value="pro">Professional</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ocean-blue focus:border-transparent resize-none" placeholder="Tell us about your surfing style, preferred waves, or any specific requirements..." data-mock="true" data-bind="form.message"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-coral text-white py-4 rounded-lg text-lg font-semibold hover:bg-red-500 transition-colors" data-event="click:handleSubmit">
+                            Send Message
+                        </button>
+                        <p class="text-sm text-gray-500 text-center">
+                            We'll get back to you within 24 hours
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl text-deep-navy mb-6">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Visit Our Shop</h4>
+                                    <p class="text-gray-600">
+                                        123 Surf Avenue<br>
+                                        Huntington Beach, CA 92648
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-wave-teal rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Call Us</h4>
+                                    <p class="text-gray-600">
+                                        (714) 555-SURF<br>
+                                        Mon-Fri: 9am-6pm PST
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-coral rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Email</h4>
+                                    <p class="text-gray-600">
+                                        info@oceanrider.com<br>
+                                        custom@oceanrider.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="bg-deep-navy rounded-2xl p-8 text-white">
+                        <h4 class="font-heading font-bold text-xl mb-6">Quick Actions</h4>
+                        <div class="space-y-4">
+                            <button class="w-full text-left py-3 px-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                                <i class="fas fa-calendar mr-3"></i>
+                                Schedule a Consultation
+                            </button>
+                            <button class="w-full text-left py-3 px-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                                <i class="fas fa-download mr-3"></i>
+                                Download Size Guide
+                            </button>
+                            <button class="w-full text-left py-3 px-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                                <i class="fas fa-wrench mr-3"></i>
+                                Custom Board Builder
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-deep-navy mb-4">Follow Our Journey</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-deep-navy text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-water text-sandy text-3xl"></i>
+                        <span class="font-heading font-bold text-2xl">OceanRider</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Crafting premium surfboards for over 25 years. From our Hawaiian workshop to waves around the world, we're dedicated to helping surfers find their perfect ride.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-lg mb-6">Products</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#" class="hover:text-sandy transition-colors">Shortboards</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Longboards</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Fun Boards</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Custom Boards</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-lg mb-6">Support</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#" class="hover:text-sandy transition-colors">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Warranty</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Shipping</a></li>
+                        <li><a href="#" class="hover:text-sandy transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 mb-4 md:mb-0">
+                    © 2024 OceanRider Surfboards. All rights reserved.
+                </div>
+                <div class="flex space-x-6 text-gray-400 text-sm">
+                    <a href="#" class="hover:text-sandy transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-sandy transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-sandy transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        // TODO: Implement smooth scrolling, form validation, and other interactive features
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Simple mobile menu toggle functionality
+            const mobileMenuButton = document.querySelector('button .fas.fa-bars')?.parentElement;
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
