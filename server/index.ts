@@ -53,6 +53,11 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
+    // Add long cache for videos and static assets in production
+    app.use("/videos", (_req, res, next) => {
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      next();
+    });
     serveStatic(app);
   }
 

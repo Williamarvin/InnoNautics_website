@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { LazyVideo } from "@/components/ui/LazyVideo";
 import { Button } from "@/components/ui/button";
 
 const features = [
@@ -63,15 +64,15 @@ export default function Features() {
                   className="relative video-container cursor-pointer group mb-6 rounded-xl overflow-hidden"
                   onClick={() => handleVideoClick(feature.videoSrc)}
                 >
-                  <video 
+                  <LazyVideo
                     className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-                    autoPlay 
-                    muted 
+                    autoPlay
+                    muted
                     loop
                     playsInline
-                  >
-                    <source src={feature.videoSrc} type="video/mp4" />
-                  </video>
+                    poster="/images/home.png"
+                    src={feature.videoSrc}
+                  />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="bg-white/90 rounded-full p-4">
                       <i className="fas fa-expand text-deep-marine text-xl"></i>
@@ -117,16 +118,14 @@ export default function Features() {
           
           <div className="flex justify-center">
             <div className="relative max-w-4xl w-full">
-              <video 
+              <LazyVideo
                 className="w-full rounded-2xl shadow-2xl"
                 controls
                 muted
                 autoPlay
-                poster="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-              >
-                <source src="/videos/Software_Demo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+                poster="/images/home.png"
+                src="/videos/Software_Demo.mp4"
+              />
             </div>
           </div>
         </div>
@@ -147,7 +146,7 @@ export default function Features() {
             >
               ✕
             </button>
-            <video 
+            <LazyVideo
               className="w-full rounded-2xl shadow-2xl"
               autoPlay 
               muted 
@@ -155,9 +154,8 @@ export default function Features() {
               controls
               onClick={(e) => e.stopPropagation()}
               style={{maxHeight: '80vh'}}
-            >
-              <source src={enlargedVideo} type="video/mp4" />
-            </video>
+              src={enlargedVideo}
+            />
           </div>
         </div>
       )}

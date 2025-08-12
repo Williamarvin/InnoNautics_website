@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { LazyVideo } from "@/components/ui/LazyVideo";
 
 export default function Hero() {
   const scrollToFeatures = () => {
@@ -19,22 +20,15 @@ export default function Hero() {
     <section id="home" className="relative h-screen overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
-        <video 
+        <LazyVideo 
           className="w-full h-full object-cover"
-          autoPlay 
-          muted 
+          autoPlay
+          muted
           loop
           playsInline
-        >
-          <source src="/videos/surfive_scene.mp4" type="video/mp4" />
-          {/* Fallback image if video doesn't load */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380')"
-            }}
-          />
-        </video>
+          poster="/images/home.png"
+          src="/videos/surfive_scene.mp4"
+        />
       </div>
       
       {/* Overlay */}
