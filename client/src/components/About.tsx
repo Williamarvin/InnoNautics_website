@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { LazyVideo } from "@/components/ui/LazyVideo";
 
 const objectives = [
   {
@@ -52,16 +53,14 @@ export default function About() {
         {/* Video Section */}
         <div className="mb-20 text-center">
           <div className="relative max-w-4xl mx-auto">
-            <video 
+            <LazyVideo
               className="w-full rounded-2xl shadow-2xl"
               controls
               muted
               autoPlay
-              poster="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-            >
-              <source src="/videos/aboutUs.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              poster="/images/home.png"
+              src="/videos/aboutUs.mp4"
+            />
           </div>
         </div>
 
